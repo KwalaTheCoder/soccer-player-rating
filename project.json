@@ -1,0 +1,16 @@
+{
+  "domain": "soccer-ratings",
+  "task": "regression",
+  "targets": [
+    "overall"
+  ],
+  "exclude": [],
+  "features": [
+    "pace",
+    "shooting",
+    "passing",
+    "dribbling",
+    "defending",
+    "physic"
+  ]
+}
