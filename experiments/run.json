@@ -1,0 +1,10 @@
+{
+  "project": "soccer-player-rating",
+  "exit_code": 0,
+  "seconds": 42.2,
+  "data_file": "Soccer/players_20.csv",
+  "data_sha256": "09309ea19750af6a3db973a20ff44fde7917f55c9a6dd19bdb4a29a35f47d6f9",
+  "tuned": false,
+  "folds": 5,
+  "seed": 42
+}

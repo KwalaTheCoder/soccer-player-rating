@@ -2,15 +2,19 @@
 
 Standalone refactor of **KwalaTheCoder's independently written EU-Soccer.ipynb**. The original work is preserved in `legacy/`; the modern implementation is AI-assisted. See `PROVENANCE.json` for provenance and source hashes.
 
+## Measured evaluation
+
+See [RESULTS.md](RESULTS.md) for the locked real-data experiment, exact input hash, holdout metrics, CV baseline and limitations.
+
 ## What changed
 
-Keeps the six FIFA player attributes from the original experiment, with a deterministic pace-by-physic interaction. Removes global outlier deletion that artificially narrows the test population and supports missing measurements. For repeated players use --group-column sofifa_id; a random split does not establish future-season performance.
+Keeps the six FIFA player attributes from the original experiment, with a deterministic pace-by-physic interaction. Removes global outlier deletion that artificially narrows the test population and supports partially missing measurements. Rows with all six required attributes missing are excluded from training and rejected at inference; this model does not score goalkeepers lacking outfield attributes. For repeated players use --group-column sofifa_id; a random split does not establish future-season performance.
 
 ## Data contract
 
 players_20.csv or equivalent with pace, shooting, passing, dribbling, defending, physic and overall. Include sofifa_id and --group-column sofifa_id for repeated player observations.
 
-Data is not included in the source repository. Obtain the original dataset legally and verify its provenance, schema and license. No real-data accuracy claim is made. Missing labels are removed and counted in the report; missing predictors are imputed. Do not add identifiers, post-outcome fields or target-derived columns as predictors. Columns beyond the documented schema require manual leakage review.
+Data is not included in the source repository. Obtain the original dataset legally and verify its provenance, schema and license. Measured results on the supplied dataset are documented in [RESULTS.md](RESULTS.md). Missing labels are removed and counted in the report; missing predictors are imputed. Do not add identifiers, post-outcome fields or target-derived columns as predictors. Columns beyond the documented schema require manual leakage review.
 
 ## Run
 

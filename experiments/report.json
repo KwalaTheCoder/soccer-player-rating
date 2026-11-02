@@ -1,0 +1,63 @@
+{
+  "project": "soccer-ratings",
+  "task": "regression",
+  "seed": 42,
+  "folds": 5,
+  "scoring": "neg_mean_absolute_error",
+  "cv_selection_score": -0.9729778231406486,
+  "selected_model": "ExtraTreesRegressor",
+  "leaderboard": [
+    {
+      "model": "DummyRegressor",
+      "parameters": {},
+      "cv_score": -5.41749448081883,
+      "cv_std": 0.03980612819615414
+    },
+    {
+      "model": "Ridge",
+      "parameters": {},
+      "cv_score": -2.825003732465844,
+      "cv_std": 0.03687630378108742
+    },
+    {
+      "model": "RandomForestRegressor",
+      "parameters": {},
+      "cv_score": -0.9883314578408543,
+      "cv_std": 0.014454133005883694
+    },
+    {
+      "model": "ExtraTreesRegressor",
+      "parameters": {},
+      "cv_score": -0.9729778231406486,
+      "cv_std": 0.01952456101518774
+    }
+  ],
+  "holdout": {
+    "mae": 0.973818329956955,
+    "rmse": 1.2632616327511446,
+    "r2": 0.964987491193007
+  },
+  "train_rows": 12993,
+  "test_rows": 3249,
+  "input_rows": 18278,
+  "missing_target_rows_removed": 0,
+  "missing_predictor_rows_removed": 2036,
+  "grouped_split": true,
+  "group_column": null,
+  "features": [
+    "pace",
+    "shooting",
+    "passing",
+    "dribbling",
+    "defending",
+    "physic"
+  ],
+  "data_fingerprint": "260808f3446e3d267c71e5bd5156ca9a4ba05cd084e7aa1b08cd14ef995f355b",
+  "versions": {
+    "python": "3.12.14",
+    "sklearn": "1.8.0",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5"
+  },
+  "note": "CV scores select the model and are optimistic; holdout metrics are the final evaluation. Negative MAE scores are higher-is-better. Synthetic tests are not real-data benchmarks."
+}

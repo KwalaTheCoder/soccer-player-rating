@@ -12,5 +12,6 @@
     "dribbling",
     "defending",
     "physic"
-  ]
+  ],
+  "require_any_features": true
 }
